@@ -1,4 +1,4 @@
-# Caso 1 - Landimg page videojuego indie / BloodVania
+# Caso 1 - Landing page videojuego indie / BloodVania
 
 ## Como ejecutar
 ```
