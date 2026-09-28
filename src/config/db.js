@@ -6,13 +6,12 @@ import Database from 'better-sqlite3';
 const dbFile = process.env.DB_FILE || './database.db';
 const db = new Database(dbFile);
 
-// Crea la tabla "items" si todavia no existe.
-// Cambia el nombre de la tabla y las columnas segun la entidad real del examen.
+// Crea la tabla "users" si todavia no existe.
 db.exec(`
-  CREATE TABLE IF NOT EXISTS items (
+  CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    description TEXT
+    email TEXT NOT NULL
   )
 `);
 

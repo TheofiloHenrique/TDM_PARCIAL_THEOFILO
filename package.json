@@ -1,7 +1,7 @@
 {
-  "name": "mvc-crud-sqlite",
+  "name": "bloodvania",
   "version": "1.0.0",
-  "description": "Esqueleto MVC + Express + SQLite (ESM)",
+  "description": "Videojuego de acción y aventura en 2D",
   "type": "module",
   "main": "src/server.js",
   "scripts": {

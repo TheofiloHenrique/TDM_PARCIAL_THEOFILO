@@ -4,18 +4,18 @@
 import db from '../config/db.js';
 
 function getAll() {
-  return db.prepare('SELECT * FROM items').all();
+  return db.prepare('SELECT * FROM users').all();
 }
 
 function getById(id) {
-  return db.prepare('SELECT * FROM items WHERE id = ?').get(id);
+  return db.prepare('SELECT * FROM users WHERE id = ?').get(id);
 }
 
 function create(data) {
-  const { name, description } = data;
+  const { name, email } = data;
   const result = db
-    .prepare('INSERT INTO items (name, description) VALUES (?, ?)')
-    .run(name, description);
+    .prepare('INSERT INTO users (name, email) VALUES (?, ?)')
+    .run(name, email);
   return getById(result.lastInsertRowid);
 }
 
@@ -24,11 +24,11 @@ function update(id, data) {
   if (!existing) return null;
 
   const name = data.name ?? existing.name;
-  const description = data.description ?? existing.description;
+  const email = data.email ?? existing.email;
 
-  db.prepare('UPDATE items SET name = ?, description = ? WHERE id = ?').run(
+  db.prepare('UPDATE users SET name = ?, email = ? WHERE id = ?').run(
     name,
-    description,
+    email,
     id
   );
 
@@ -36,7 +36,7 @@ function update(id, data) {
 }
 
 function remove(id) {
-  const result = db.prepare('DELETE FROM items WHERE id = ?').run(id);
+  const result = db.prepare('DELETE FROM users WHERE id = ?').run(id);
   return result.changes > 0;
 }
 
