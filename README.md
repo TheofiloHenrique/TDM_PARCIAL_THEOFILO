@@ -1,4 +1,4 @@
-# Esqueleto MVC + Express + SQLite (ESM)
+# Caso 1 - Landimg page videojuego indie / BloodVania
 
 ## Como ejecutar
 ```

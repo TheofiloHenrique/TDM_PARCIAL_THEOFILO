@@ -1,0 +1,190 @@
+/* Paleta de colores: negro, blanco y rojo */
+:root {
+  --color-black: #0a0a0a;
+  --color-dark: #141414;
+  --color-white: #f5f5f5;
+  --color-red: #c41e2c;
+  --color-red-hover: #e63946;
+}
+
+html {
+  scroll-behavior: smooth; /* scroll suave al navegar entre secciones */
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: var(--color-black);
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar-brand {
+  color: var(--color-red) !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: var(--color-white) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-red) !important;
+}
+
+/* Hero */
+#hero {
+  background-color: var(--color-black);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+#hero h1 {
+  font-weight: 800;
+}
+
+#hero .highlight {
+  color: var(--color-red);
+}
+
+.key-art-placeholder {
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 540 / 320;
+  background-color: var(--color-dark);
+  border: 2px dashed var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Boton principal con hover/transicion */
+.btn-play {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-play:hover {
+  background-color: var(--color-red-hover);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+/* Features */
+#features {
+  background-color: var(--color-dark);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.feature-card {
+  background-color: var(--color-black);
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-red);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--color-red);
+  margin-bottom: 1rem;
+}
+
+/* Registro */
+#signup {
+  background-color: var(--color-black);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#signup .form-control {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border: 1px solid #333;
+}
+
+#signup .form-control:focus {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 0.2rem rgba(196, 30, 44, 0.25);
+}
+
+#signup .form-control::placeholder {
+  color: #777;
+}
+
+.btn-submit {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-red-hover);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-black);
+  border-top: 1px solid #2a2a2a;
+  padding: 2rem 0;
+}
+
+.social-icon {
+  color: var(--color-white);
+  font-size: 1.3rem;
+  margin: 0 0.6rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  color: var(--color-red);
+  transform: translateY(-3px);
+}
+
+.key-art-placeholder {
+  width: 100%;
+  max-width: 540px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--color-red);
+}
+
+#signup-alert.alert-success {
+  background-color: #1e3a26;
+  border-color: var(--color-red);
+  color: var(--color-white);
+}
+
+#signup-alert.alert-danger {
+  background-color: #3a1e1e;
+  border-color: var(--color-red);
+  color: var(--color-white);
+}
